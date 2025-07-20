@@ -15,8 +15,6 @@ A provably fair, decentralized raffle system built on Ethereum using Chainlink V
 - [Usage](#usage)
 - [Testing](#testing)
 - [Deployment](#deployment)
-- [Contract Addresses](#contract-addresses)
-- [Security](#security)
 - [Contributing](#contributing)
 - [License](#license)
 
