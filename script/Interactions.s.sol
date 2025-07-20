@@ -48,9 +48,9 @@ contract FundSubscription is Script, CodeConstants {
         address linkToken = helperConfig.getConfig().link;
         address account = helperConfig.getConfig().account;
 
-         if (subscriptionId == 0) {
+        if (subscriptionId == 0) {
             CreateSubscription createSub = new CreateSubscription(helperConfig);
-           (uint256 updatedSubId, address updatedVRFv2) = createSub.createSubscriptionUsingConfig();
+            (uint256 updatedSubId, address updatedVRFv2) = createSub.createSubscriptionUsingConfig();
             subscriptionId = updatedSubId;
             vrfCoordinator = updatedVRFv2;
             console.log("New SubId Created! ", subscriptionId, "VRF Address: ", vrfCoordinator);
@@ -91,7 +91,7 @@ contract AddConsumer is Script {
 
         if (subId == 0) {
             CreateSubscription createSub = new CreateSubscription(helperConfig);
-           (uint256 updatedSubId, address updatedVRFv2) = createSub.createSubscriptionUsingConfig();
+            (uint256 updatedSubId, address updatedVRFv2) = createSub.createSubscriptionUsingConfig();
             subId = updatedSubId;
             vrfCoordinator = updatedVRFv2;
             console.log("New SubId Created! ", subId, "VRF Address: ", vrfCoordinator);

@@ -111,9 +111,8 @@ contract InteractionsTest is CodeConstants, Test {
         uint256 subscriptionId = coordinator.createSubscription();
 
         vm.stopPrank();
-        
+
         AddConsumer addConsumer = new AddConsumer();
         addConsumer.addConsumerUsingConfig(address(raffle));
     }
-
 }
