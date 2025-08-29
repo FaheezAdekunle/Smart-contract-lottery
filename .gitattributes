@@ -1,14 +1,24 @@
-# Mark common dependency folders as vendored
-lib/** linguist-vendored
-node_modules/** linguist-vendored
-out/** linguist-vendored
-cache/** linguist-vendored
+# ----------------------------
+# GitHub Linguist Overrides
+# ----------------------------
 
-# Ensure Solidity is recognized
+# Count Solidity files as the main language
 *.sol linguist-detectable=true
 *.sol linguist-language=Solidity
 
-# Optional: Hide TOML, JSON, Markdown from stats
-*.toml linguist-vendored
-*.json linguist-vendored
-*.md linguist-vendored
+# Ignore vendored dependencies (like forge-std, openzeppelin, chainlink, etc.)
+lib/* linguist-vendored
+
+# Ignore build artifacts
+out/* linguist-vendored
+cache/* linguist-vendored
+broadcast/* linguist-vendored
+
+# Ignore environment and configs
+.env linguist-vendored
+foundry.toml linguist-vendored
+
+# Optional: if you have scripts in JS/TS/Python, mark them as non-detectable
+script/**/*.js linguist-detectable=false
+script/**/*.ts linguist-detectable=false
+script/**/*.py linguist-detectable=false
