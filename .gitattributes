@@ -1,0 +1,11 @@
+# Ignore Foundry/Forge libraries and dependencies
+lib/* linguist-vendored
+
+# Ignore build artifacts
+out/* linguist-vendored
+
+# Ignore node_modules if using Hardhat/JS tooling
+node_modules/* linguist-vendored
+
+# Treat .sol files as Solidity (sometimes needed)
+*.sol linguist-language=Solidity
