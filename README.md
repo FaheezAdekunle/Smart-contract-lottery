@@ -220,4 +220,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Follow Me On Twitter
 ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/mibunna)
 
-**⚠️ Disclaimer**: This contract is for educational/demonstration purposes. Use at your own risk in production environments. Always conduct thorough testing and audits before mainnet deployment.
