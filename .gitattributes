@@ -1,11 +1,14 @@
-# Ignore Foundry/Forge libraries and dependencies
-lib/* linguist-vendored
+# Mark common dependency folders as vendored
+lib/** linguist-vendored
+node_modules/** linguist-vendored
+out/** linguist-vendored
+cache/** linguist-vendored
 
-# Ignore build artifacts
-out/* linguist-vendored
-
-# Ignore node_modules if using Hardhat/JS tooling
-node_modules/* linguist-vendored
-
-# Treat .sol files as Solidity (sometimes needed)
+# Ensure Solidity is recognized
+*.sol linguist-detectable=true
 *.sol linguist-language=Solidity
+
+# Optional: Hide TOML, JSON, Markdown from stats
+*.toml linguist-vendored
+*.json linguist-vendored
+*.md linguist-vendored
